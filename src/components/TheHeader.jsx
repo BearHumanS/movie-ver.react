@@ -3,7 +3,10 @@ import './TheHeader.css'
 import { AiOutlineSearch } from 'react-icons/ai'
 
 export default function TheHeader() {
-  const boxOpen = () => {}
+  function openBox() {
+    const header = document.querySelector('header')
+    header.classList.add('searching')
+  }
   return (
     <>
       <header>
@@ -15,7 +18,9 @@ export default function TheHeader() {
             <a href="#">about me</a>
           </li>
         </ul>
-        <div className="search-box">
+        <div
+          className="search-box"
+          onClick={openBox}>
           <AiOutlineSearch />
         </div>
       </header>
