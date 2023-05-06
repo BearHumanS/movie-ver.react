@@ -3,6 +3,7 @@ header {
     width: 100%;
     height: 80px;
     background-color: var(--color-header);
+    z-index: 10;
 }
 header .menu {
     display: flex;
@@ -37,4 +38,12 @@ header .search-box {
 }
 header .search-box:hover {
     color: rgba(240, 248, 255, 1);
+}
+header.searching ul.menu,
+header.searching .search-box{
+    opacity: 0;
+}
+header.searching .search-wrap {
+    visibility: visible;
+    opacity: 1;
 }

@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import './TheHeader.css'
 import { AiOutlineSearch } from 'react-icons/ai'
+import Search from './Search'
 
 export default function TheHeader() {
   const [listActive, setListActive] = useState(false)
   const [aboutActive, setAboutActive] = useState(false)
+
   function openBox() {
     const header = document.querySelector('header')
     header.classList.add('searching')
@@ -41,6 +43,7 @@ export default function TheHeader() {
           onClick={openBox}>
           <AiOutlineSearch />
         </div>
+        <Search />
       </header>
     </>
   )
