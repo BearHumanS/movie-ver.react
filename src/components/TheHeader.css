@@ -21,6 +21,9 @@ header .menu a {
 header .menu > li:hover a {
     color: var(--color-list);  
 }
+header .menu .active{
+    color: var(--color-list);
+}
 header .search-box {
     position: absolute;
     display: flex;
