@@ -4,7 +4,7 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import Search from './Search'
 
 export default function TheHeader() {
-  const [listActive, setListActive] = useState(false)
+  const [listActive, setListActive] = useState(true)
   const [aboutActive, setAboutActive] = useState(false)
 
   function openBox() {
