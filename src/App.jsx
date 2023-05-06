@@ -1,8 +1,9 @@
 import './App.css'
 import TheHeader from './components/TheHeader'
+import RainEffect from './components/Rain'
+import TheMain from './components/TheMain'
 import TheFooter from './components/TheFooter'
 import { Reset } from 'styled-reset'
-import RainEffect from './components/Rain'
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Reset />
       <TheHeader />
       <RainEffect />
+      <TheMain />
       <TheFooter />
     </>
   )

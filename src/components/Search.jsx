@@ -8,10 +8,7 @@ export default function Search() {
     header.classList.remove('searching')
   }
 
-  const close = remove
-  const shadow = remove
-
-  const search = e => {
+  const search = async e => {
     const searchInput = document.querySelector('.search-input')
     if (e.key === 'Enter') {
       remove()
@@ -22,13 +19,14 @@ export default function Search() {
       }
     }
   }
+
   return (
     <>
       <div className="search-wrap">
         <div className="search">
           <div
             className="shadow"
-            onClick={shadow}></div>
+            onClick={remove}></div>
           <div className="text">
             <input
               className="search-input"
@@ -50,7 +48,7 @@ export default function Search() {
             </div>
             <AiOutlineClose
               className="close"
-              onClick={close}
+              onClick={remove}
             />
           </div>
         </div>
