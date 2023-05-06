@@ -7,6 +7,7 @@ export default function Search() {
     const header = document.querySelector('header')
     header.classList.remove('searching')
   }
+
   const close = remove
   const shadow = remove
 
