@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './TheHeader.css'
-import { AiOutlineSearch } from 'react-icons/ai'
 import Search from './Search'
+import { AiOutlineSearch } from 'react-icons/ai'
+import './TheHeader.css'
 
 export default function TheHeader() {
   const [listActive, setListActive] = useState(true)
