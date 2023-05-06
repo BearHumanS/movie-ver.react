@@ -1,10 +1,13 @@
 import React from 'react'
 import './Search.css'
 import { AiOutlineClose } from 'react-icons/ai'
-import TheHeader from './TheHeader'
 
 export default function Search() {
   const close = () => {
+    const header = document.querySelector('header')
+    header.classList.remove('searching')
+  }
+  const shadow = () => {
     const header = document.querySelector('header')
     header.classList.remove('searching')
   }
@@ -12,7 +15,9 @@ export default function Search() {
     <>
       <div className="search-wrap">
         <div className="search">
-          <div className="shadow"></div>
+          <div
+            className="shadow"
+            onClick={shadow}></div>
           <div className="text">
             <input
               className="search-input"
