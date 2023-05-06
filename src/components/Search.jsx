@@ -3,13 +3,23 @@ import './Search.css'
 import { AiOutlineClose } from 'react-icons/ai'
 
 export default function Search() {
-  const close = () => {
+  function remove() {
     const header = document.querySelector('header')
     header.classList.remove('searching')
   }
-  const shadow = () => {
-    const header = document.querySelector('header')
-    header.classList.remove('searching')
+  const close = remove
+  const shadow = remove
+
+  const search = e => {
+    const searchInput = document.querySelector('.search-input')
+    if (e.key === 'Enter') {
+      remove()
+      const searchVal = searchInput.value
+      if (searchVal.trim() === '') {
+        alert('검색어를 입력해주세요.')
+        return
+      }
+    }
   }
   return (
     <>
@@ -23,6 +33,7 @@ export default function Search() {
               className="search-input"
               type="text"
               placeholder="영화를 검색하세요."
+              onKeyDown={search}
             />
             <div className="page-view">
               <select id="num-pages">
