@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Search from './Search'
 import { AiOutlineSearch } from 'react-icons/ai'
 import './TheHeader.css'
@@ -6,14 +6,22 @@ import './TheHeader.css'
 export default function TheHeader() {
   const [listActive, setListActive] = useState(true)
   const [aboutActive, setAboutActive] = useState(false)
+  const [toggleSearching, setToggleSearching] = useState(false)
+  const inputRef = useRef(null)
 
   function openBox() {
+    setToggleSearching(!toggleSearching)
+    setTimeout(() => {
+      inputRef.current.focus()
+    }, 600)
+  }
+  /* function openBox() {
     const header = document.querySelector('header')
     header.classList.add('searching')
-  }
+  } */
   return (
     <>
-      <header>
+      <header className={`${toggleSearching ? 'searching' : ''}`}>
         <ul className="menu">
           <li>
             <a
@@ -43,7 +51,11 @@ export default function TheHeader() {
           onClick={openBox}>
           <AiOutlineSearch />
         </div>
-        <Search />
+        <Search
+          toggleSearching={toggleSearching}
+          setToggleSearching={setToggleSearching}
+          inputRef={inputRef}
+        />
       </header>
     </>
   )
