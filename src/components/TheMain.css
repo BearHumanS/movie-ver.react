@@ -6,12 +6,3 @@ main {
     top: 80px;
     bottom: 0;
 }
-main .movie-list {
-    height: auto;
-    background-color: orange;
-    width: 65%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-}

@@ -2,7 +2,7 @@ import React from 'react'
 import './Search.css'
 import { AiOutlineClose } from 'react-icons/ai'
 
-export default function Search({ setToggleSearching, inputRef }) {
+export default function Search({ setToggleSearching, inputRef, setInfo }) {
   const remove = () => {
     setToggleSearching(false)
   }
@@ -16,7 +16,7 @@ export default function Search({ setToggleSearching, inputRef }) {
     if (e.key === 'Enter') {
       const searchVal = searchInput.value
       if (searchVal.trim() === '') {
-        alert('검색어를 입력해주세요.')
+        setInfo('검색어를 입력해주세요.')
         return
       }
       remove()

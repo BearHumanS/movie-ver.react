@@ -3,7 +3,7 @@ import Search from './Search'
 import { AiOutlineSearch } from 'react-icons/ai'
 import './TheHeader.css'
 
-export default function TheHeader() {
+export default function TheHeader({ setInfo }) {
   const [listActive, setListActive] = useState(true)
   const [aboutActive, setAboutActive] = useState(false)
   const [toggleSearching, setToggleSearching] = useState(false)
@@ -55,6 +55,7 @@ export default function TheHeader() {
           toggleSearching={toggleSearching}
           setToggleSearching={setToggleSearching}
           inputRef={inputRef}
+          setInfo={setInfo}
         />
       </header>
     </>

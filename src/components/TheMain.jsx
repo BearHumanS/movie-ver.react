@@ -4,12 +4,12 @@ import Modal from './Modal'
 import RainEffect from './Rain'
 import './TheMain.css'
 
-export default function TheMain() {
+export default function TheMain({ info }) {
   return (
     <>
       <main>
         <RainEffect />
-        <MovieList />
+        <MovieList info={info} />
         <Modal />
       </main>
     </>
