@@ -1,3 +1,7 @@
+# ver. Demo
+
+https://movie-ver-react.vercel.app/
+
 # 진행사항
 
 Header 컴포넌트, Main컴포넌트, Footer컴포넌트로 크게 나눔.
