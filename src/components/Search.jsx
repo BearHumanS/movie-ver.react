@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Search.css'
 import { AiOutlineClose } from 'react-icons/ai'
 
@@ -12,10 +12,8 @@ export default function Search({ setToggleSearching, inputRef, setInfo }) {
   } */
 
   const search = async e => {
-    const searchInput = document.querySelector('.search-input')
     if (e.key === 'Enter') {
-      const searchVal = searchInput.value
-      if (searchVal.trim() === '') {
+      if (inputRef.current.value.trim() === '') {
         setInfo('검색어를 입력해주세요.')
         return
       }
@@ -32,7 +30,6 @@ export default function Search({ setToggleSearching, inputRef, setInfo }) {
             onClick={remove}></div>
           <div className="text">
             <input
-              className="search-input"
               type="text"
               placeholder="영화를 검색하세요."
               onKeyDown={search}

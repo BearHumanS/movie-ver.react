@@ -16,7 +16,8 @@ Footer 컴포넌트는 단독 사용.
 
 fetch함수를 이용해서 불러올 데이터를 어떤 컴포넌트에 배치해야할지.
 
-Search 컴포넌트 내부에 있는 아래 코드를 어떻게 처리해야하는지. (fetch함수가 사용되는 컴포넌트에 같이 있어야하는지.)
+Search 컴포넌트 내부에 있는 아래 코드를 어떻게 처리해야하는지.
+(fetch함수가 사용되는 컴포넌트에 같이 있어야하는지.)
 ```
   const search = async e => {
     const searchInput = document.querySelector('.search-input')
@@ -30,8 +31,10 @@ Search 컴포넌트 내부에 있는 아래 코드를 어떻게 처리해야하�
     }
   }
   ``` 
-# 위 내용들에 대해 생각한 부분
+# 게인적으로 생각하는 부분
 
 fetch함수를 App 컴포넌트에서 실행해서 하위 컴포넌트로 props를 전달해주는 것.
 
 App 컴포넌트가 아닌 독립적으로 FetchMovies 컴포넌트를 생성했을 때에 어떻게 전달해줘야하는지.
+
+

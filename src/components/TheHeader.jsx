@@ -3,11 +3,10 @@ import Search from './Search'
 import { AiOutlineSearch } from 'react-icons/ai'
 import './TheHeader.css'
 
-export default function TheHeader({ setInfo }) {
+export default function TheHeader({ setInfo, inputRef }) {
   const [listActive, setListActive] = useState(true)
   const [aboutActive, setAboutActive] = useState(false)
   const [toggleSearching, setToggleSearching] = useState(false)
-  const inputRef = useRef(null)
 
   function openBox() {
     setToggleSearching(!toggleSearching)
@@ -52,7 +51,6 @@ export default function TheHeader({ setInfo }) {
           <AiOutlineSearch />
         </div>
         <Search
-          toggleSearching={toggleSearching}
           setToggleSearching={setToggleSearching}
           inputRef={inputRef}
           setInfo={setInfo}
