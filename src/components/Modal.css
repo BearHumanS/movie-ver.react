@@ -20,7 +20,7 @@
 
 .modal_content {
     background-color: white;
-    padding: 50px 100px;
+    padding: 50px;
     text-align: center;
     border-radius: 10px;
     position: relative;
@@ -30,12 +30,13 @@
     z-index: 9999;
     overflow-y:auto;
     display: flex;
+    justify-content: center;
 
 }
 .modal_content .modal-img {
     top: 0;
     bottom: 0;
-    margin-right: 20px;
+    margin-right: 50px;
     position: sticky;
     display: flex;
     align-items: center;
@@ -77,4 +78,6 @@ h1{
 .cancel:hover {
     background-color: red;
     color: var(--color-white);
+    border-radius: 8px;
 }
+
