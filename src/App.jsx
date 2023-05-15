@@ -10,6 +10,8 @@ const App = () => {
   const [searchInput, setSearchInput] = useState('')
   const [movieData, setMovieData] = useState([])
 
+  const apiKey = '7035c60c'
+
   const searchHandleInput = e => {
     setSearchInput(e.target.value)
   }
@@ -19,7 +21,6 @@ const App = () => {
     if (![1, 2, 3].includes(numPages)) {
       return []
     }
-    const apiKey = '7035c60c'
     const response = await fetch(
       `https://www.omdbapi.com/?apikey=${apiKey}&s=${searchVal}&page=${page}&y=${year}`
     )
@@ -29,7 +30,7 @@ const App = () => {
 
   const searchHandle = async () => {
     if (searchInput.trim() === '') {
-      setInfo('검색어를 입력해주세요.')
+      alert('검색어를 입력해주세요.')
       return
     }
     try {
@@ -41,14 +42,9 @@ const App = () => {
         movies.push(...data)
       }
 
-      if (movies.length === 0) {
-        alert('API 요청에 실패하였거나 페이지 범위를 지정해야 합니다.')
-        return
-      }
-
       setMovieData(movies)
     } catch (error) {
-      alert('API 요청에 실패했습니다. ', error)
+      alert('API 요청에 실패했습니다.', error)
     }
   }
 
@@ -62,8 +58,8 @@ const App = () => {
       />
 
       <TheMain
-        info={info}
         movieData={movieData}
+        apiKey={apiKey}
       />
       <TheFooter />
     </>

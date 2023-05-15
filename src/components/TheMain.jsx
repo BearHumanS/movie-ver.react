@@ -1,19 +1,18 @@
 import React from 'react'
 import MovieList from './MovieList'
-import Modal from './Modal'
+
 import RainEffect from './Rain'
 import './TheMain.css'
 
-export default function TheMain({ info, movieData }) {
+export default function TheMain({ movieData, apiKey }) {
   return (
     <>
       <main>
         <RainEffect />
         <MovieList
-          info={info}
           movieData={movieData}
+          apiKey={apiKey}
         />
-        <Modal />
       </main>
     </>
   )
