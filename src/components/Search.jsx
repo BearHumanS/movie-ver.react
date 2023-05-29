@@ -15,13 +15,13 @@ const Search = ({ searchInput, searchHandle, searchHandleInput, closeBox }) => {
               type="text"
               placeholder="영화를 검색하세요."
               onChange={searchHandleInput}
+              value={searchInput}
               onKeyDown={e => {
                 if (e.key === 'Enter') {
                   searchHandle()
                   closeBox()
                 }
               }}
-              value={searchInput}
             />
             <div className="page-view">
               <select className="num-pages">
