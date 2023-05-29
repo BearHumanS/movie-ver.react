@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    height: 80px;
+    align-items: center;   
+    left: 100px;
+    position: absolute;
+    gap: 100px; 
+    z-index: 9999;
+}
+.menu > li {
+    font-size: 30px;    
+}
+.menu a {
+    color: var(--color-menu);
+}
+.menu > li:hover a {
+    color: var(--color-list);  
+}
+.menu .active{
+    color: var(--color-list);
+}

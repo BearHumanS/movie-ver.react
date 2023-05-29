@@ -4,26 +4,7 @@ header {
     height: 80px;
     background-color: var(--color-header);
 }
-header .menu {
-    display: flex;
-    height: 80px;
-    align-items: center;   
-    left: 100px;
-    position: absolute;
-    gap: 100px; 
-}
-header .menu > li {
-    font-size: 30px;    
-}
-header .menu a {
-    color: var(--color-menu);
-}
-header .menu > li:hover a {
-    color: var(--color-list);  
-}
-header .menu .active{
-    color: var(--color-list);
-}
+
 header .search-box {
     position: absolute;
     display: flex;
