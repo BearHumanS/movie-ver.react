@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './routes/Home'
 import About from './routes/About'
-import Nav from './components/Nav'
+import NotFound from './routes/NotFound'
 import TheFooter from './components/TheFooter'
 import './App.css'
 import { Reset } from 'styled-reset'
@@ -20,6 +20,10 @@ const App = () => {
           <Route
             path="/about"
             element={<About />}
+          />
+          <Route
+            path="*"
+            element={<NotFound />}
           />
         </Routes>
         <TheFooter />
