@@ -20,7 +20,7 @@ export default function About() {
           width: '100%',
           alignItems: 'center'
         }}>
-        남기훈입니다.
+        아라리입니다.
       </p>
     </>
   )
